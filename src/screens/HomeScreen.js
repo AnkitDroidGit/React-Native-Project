@@ -1,8 +1,18 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View, Button } from "react-native";
 
 const HomeScreen = () => {
-  return <Text style={styles.text}>Ankit</Text>;
+  return (
+    <View>
+      <Text style={styles.text}>Ankit</Text>
+      <Button
+        onPress={() => {
+          console.log("Butn pressed");
+        }}
+        title="Go to Components"
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
