@@ -22,13 +22,14 @@ const ListScreen = () => {
 
   return (
     <FlatList
-      keyExtractor={(friedn) => friedn.name}
-      //   keyExtractor={(friedn) => friedn.key}
+      showsVerticalScrollIndicator={false}
+      keyExtractor={(friend) => friend.name}
+      //keyExtractor={(friedn) => friedn.key} // another way
       data={friedns}
       renderItem={({ item }) => {
         return (
           <View>
-            <Text>{item.name}</Text>
+            <Text style={styels.textStyle}>{item.name}</Text>
           </View>
         );
       }}
@@ -36,6 +37,11 @@ const ListScreen = () => {
   );
 };
 
-const styels = StyleSheet.create({});
+const styels = StyleSheet.create({
+  textStyle: {
+    marginVertical: 10,
+    marginLeft: 10,
+  },
+});
 
 export default ListScreen;
