@@ -1,7 +1,17 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import ImageDetail from "../components/ImageDetail";
+
 const ImageScreen = () => {
-  return <Text>Hello</Text>;
+  return (
+    <View>
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+      <ImageDetail />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});
